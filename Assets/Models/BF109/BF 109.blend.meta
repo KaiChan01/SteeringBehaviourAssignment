@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 6e4d19017dc59824fb01fabd3ae8f4d8
+timeCreated: 1520183565
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 20mm
+    100002: //RootNode
+    100004: canopy
+    100006: Cockpit_detail
+    100008: Pilot
+    100010: props
+    100012: SeatBack
+    100014: SeatBottom
+    100016: spinner
+    400000: 20mm
+    400002: //RootNode
+    400004: canopy
+    400006: Cockpit_detail
+    400008: Pilot
+    400010: props
+    400012: SeatBack
+    400014: SeatBottom
+    400016: spinner
+    2300000: 20mm
+    2300002: //RootNode
+    2300004: canopy
+    2300006: Cockpit_detail
+    2300008: Pilot
+    2300010: props
+    2300012: SeatBack
+    2300014: SeatBottom
+    2300016: spinner
+    3300000: 20mm
+    3300002: //RootNode
+    3300004: canopy
+    3300006: Cockpit_detail
+    3300008: Pilot
+    3300010: props
+    3300012: SeatBack
+    3300014: SeatBottom
+    3300016: spinner
+    4300000: 109
+    4300002: 20mm
+    4300004: canopy
+    4300006: spinner
+    4300008: props
+    4300010: Pilot
+    4300012: Cockpit_detail
+    4300014: SeatBack
+    4300016: SeatBottom
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Engine 2 Assignment.Plugins", "Game Engine 2 Assignment.Plugins.csproj", "{DD8DD8BE-CE85-B8A1-D53C-227884B8BB65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Engine 2 Assignment", "Game Engine 2 Assignment.csproj", "{137397EE-F276-C574-CB0A-E66AE6BA8DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Engine 2 Assignment.Editor.Plugins", "Game Engine 2 Assignment.Editor.Plugins.csproj", "{55286AEC-D130-2631-9E24-A070C72D40C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD8DD8BE-CE85-B8A1-D53C-227884B8BB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD8DD8BE-CE85-B8A1-D53C-227884B8BB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD8DD8BE-CE85-B8A1-D53C-227884B8BB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD8DD8BE-CE85-B8A1-D53C-227884B8BB65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137397EE-F276-C574-CB0A-E66AE6BA8DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137397EE-F276-C574-CB0A-E66AE6BA8DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137397EE-F276-C574-CB0A-E66AE6BA8DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137397EE-F276-C574-CB0A-E66AE6BA8DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55286AEC-D130-2631-9E24-A070C72D40C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55286AEC-D130-2631-9E24-A070C72D40C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55286AEC-D130-2631-9E24-A070C72D40C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55286AEC-D130-2631-9E24-A070C72D40C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
