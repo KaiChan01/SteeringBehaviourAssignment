@@ -4,15 +4,16 @@ using UnityEngine;
 
 public abstract class SteeringBehaviour : MonoBehaviour {
 
-    public Vector3 force;
-    public float weight = 1.0f;
+    private Vector3 force;
+    private float weight = 1.0f;
 
-    private BaseSteering fighterPlane;
+    [HideInInspector]
+    public BaseSteering fighterPlane;
 
     public void Awake()
     {
         fighterPlane = GetComponent<BaseSteering>();
     }
 
-    public abstract Vector3 calculateForce();
+    public abstract Vector3 calculateTarget();
 }

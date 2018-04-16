@@ -93,10 +93,12 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\BaseSteering.cs" />
+    <Compile Include="Assets\Scripts\ForwardWander.cs" />
     <Compile Include="Assets\Scripts\Purse.cs" />
     <Compile Include="Assets\Scripts\RotateSky.cs" />
     <Compile Include="Assets\Scripts\SteeringBehaviour.cs" />
-    <Compile Include="Assets\Scripts\Wonder.cs" />
+    <Compile Include="Assets\Scripts\StraightSeek.cs" />
+    <Compile Include="Assets\Scripts\Wander.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

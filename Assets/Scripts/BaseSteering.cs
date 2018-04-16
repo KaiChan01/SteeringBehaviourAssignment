@@ -4,39 +4,42 @@ using UnityEngine;
 
 public class BaseSteering : MonoBehaviour
 {
-
-    public GameObject target;
-
     public int maxAltitude;
     public int minAltitude;
-    public int flyingSpeed;
+    public int maxSpeed;
     public float mass;
+    private float fallingAcc = 9.81f;
 
-    public bool wonder;
-
-    //We'll hard code force for now;
+    [HideInInspector]
     public Vector3 force = Vector3.zero;
+    [HideInInspector]
     public Vector3 velocity = Vector3.zero;
-    public Vector3 wonderTarget = Vector3.zero;
+    [HideInInspector]
+    public Vector3 acceleration = Vector3.zero;
 
     //SteeringBehaviours
     List<SteeringBehaviour> SteeringBehaviours = new List<SteeringBehaviour>();
 
-    // Use this for initialization
     void Start()
     {
         SteeringBehaviour[] steering = GetComponents<SteeringBehaviour>();
         for(int i = 0; i < steering.Length; i++)
         {
-            SteeringBehaviours.Add(steering[i]);
+            this.SteeringBehaviours.Add(steering[i]);
         }
     }
 
-    Vector3 seekTarget(Vector3 targetPos)
+    float checkOrientation()
+    {
+        float orientation = Vector3.Dot(transform.forward, Vector3.up);
+        return orientation;
+    }
+
+    public Vector3 seekTarget(Vector3 targetPos)
     {
         Vector3 desiredPos = targetPos - transform.position;
         desiredPos.Normalize();
-        desiredPos *= flyingSpeed;
+        desiredPos *= maxSpeed;
         return desiredPos - velocity;
     }
 
@@ -47,25 +50,49 @@ public class BaseSteering : MonoBehaviour
         {
             if(behaviour.isActiveAndEnabled)
             {
-                force += behaviour.calculateForce();
+                force = behaviour.calculateTarget();
             }
         }
+
         return force;
     }
 
     // Update is called once per frame
     void Update()
     {
-        force += calculateForce();
+        float orientation = checkOrientation();
 
-        Vector3 acceleration = force / mass;
+        force = calculateForce();
+
+        acceleration = force / mass;
+
+        /*
+        if (orientation > 0)
+        {
+            //Ship is facing up
+            acceleration = acceleration - (acceleration * orientation);
+        }
+        else
+        {
+            //Ship is facing down
+            acceleration *= 1 + Mathf.Abs(orientation);
+        }
+        */
+        
 
         velocity += acceleration * Time.deltaTime;
+
+        Vector3 globalUp = new Vector3(0, 0.2f, 0);
+        Vector3 accelUp = acceleration * 0.05f;
+        Vector3 bankUp = accelUp + globalUp;
+        Vector3 tempUp = transform.up;
+        tempUp = Vector3.Lerp(tempUp, bankUp, Time.deltaTime * 3);
+
         if (velocity.magnitude > 0.0001f)
         {
-            transform.LookAt(transform.position + velocity);
+            transform.LookAt(transform.position + velocity, tempUp);
+            transform.position += velocity * Time.deltaTime;
         }
-        transform.position += velocity * Time.deltaTime;
     }
 
 }
