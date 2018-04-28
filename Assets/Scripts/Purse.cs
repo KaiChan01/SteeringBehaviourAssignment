@@ -29,9 +29,6 @@ public class Purse : SteeringBehaviour {
 
         //float dist = Vector3.Distance(targetScript.transform.position, fighterPlane.transform.position);
         //float time = dist / fighterPlane.velocity.magnitude;
-
-        Vector3 newTarget = targetScript.transform.position;
-
-        return fighterPlane.seekTarget(newTarget);
+        return fighterPlane.seekTarget(targetScript.transform.position);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class SteeringBehaviour : MonoBehaviour {
 
     private Vector3 force;
-    private float weight = 1.0f;
+    public float weight = 1.0f;
 
     [HideInInspector]
     public BaseSteering fighterPlane;

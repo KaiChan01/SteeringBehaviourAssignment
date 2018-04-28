@@ -8,7 +8,6 @@ public class BaseSteering : MonoBehaviour
     public int minAltitude;
     public int maxSpeed;
     public float mass;
-    private float fallingAcc = 9.81f;
 
     [HideInInspector]
     public Vector3 force = Vector3.zero;
@@ -16,6 +15,9 @@ public class BaseSteering : MonoBehaviour
     public Vector3 velocity = Vector3.zero;
     [HideInInspector]
     public Vector3 acceleration = Vector3.zero;
+
+    // float fallingAcc = 9.81f;
+    // float orientation;
 
     //SteeringBehaviours
     List<SteeringBehaviour> SteeringBehaviours = new List<SteeringBehaviour>();
@@ -50,7 +52,7 @@ public class BaseSteering : MonoBehaviour
         {
             if(behaviour.isActiveAndEnabled)
             {
-                force = behaviour.calculateTarget();
+                force += behaviour.calculateTarget() * behaviour.weight;
             }
         }
 
@@ -60,7 +62,7 @@ public class BaseSteering : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float orientation = checkOrientation();
+        //orientation = checkOrientation();
 
         force = calculateForce();
 
@@ -84,9 +86,9 @@ public class BaseSteering : MonoBehaviour
 
         Vector3 globalUp = new Vector3(0, 0.2f, 0);
         Vector3 accelUp = acceleration * 0.05f;
-        Vector3 bankUp = accelUp + globalUp;
+        Vector3 bankUp = accelUp + globalUp;        
         Vector3 tempUp = transform.up;
-        tempUp = Vector3.Lerp(tempUp, bankUp, Time.deltaTime * 3);
+        tempUp = Vector3.Lerp(tempUp, bankUp, Time.deltaTime);
 
         if (velocity.magnitude > 0.0001f)
         {
