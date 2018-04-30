@@ -14,7 +14,7 @@ public class ForwardWander : SteeringBehaviour
     public float distance = 15;
 
     float horizontalTheta = 0.0f;
-    float verticalTheta = 0.0f;
+    //float verticalTheta = 0.0f;
 
     Vector3 target;
     Vector3 worldTarget;
@@ -49,15 +49,16 @@ public class ForwardWander : SteeringBehaviour
     {
         //Maping the returned Value to between -1 and 1
         float noiseValueHorizon = mapFunction(Mathf.PerlinNoise(horizontalTheta, 0), 0, 1, 1, -1);
-        float noiseValueVertical = mapFunction(Mathf.PerlinNoise(verticalTheta, 0), 0, 1, 1, -1);
+        //float noiseValueVertical = mapFunction(Mathf.PerlinNoise(verticalTheta, 0), 0, 1, 1, -1);
 
         float viewAngleHorizon = noiseValueHorizon * amplitudeHorizontal * Mathf.Deg2Rad;
 
         Vector3 objectAngles = transform.rotation.eulerAngles;
 
+        objectAngles.z = 0;
+
         target.x = Mathf.Sin(viewAngleHorizon) * (amplitudeHorizontal);
         target.z = Mathf.Cos(viewAngleHorizon);
-        target.y = noiseValueVertical;
         target.y = 0;
 
         target *= radius;

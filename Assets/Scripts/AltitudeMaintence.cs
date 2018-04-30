@@ -33,13 +33,13 @@ public class AltitudeMaintence : SteeringBehaviour
 
     public override Vector3 calculateTarget()
     {
-        if(fighterPlane.transform.position.y > fighterPlane.maxAltitude)
+        if(transform.position.y > fighterPlane.maxAltitude)
         {
             worldTarget = new Vector3(transform.position.x, transform.position.y - reAdjustForce, transform.position.z);
             return fighterPlane.seekTarget(worldTarget);
         }
 
-        if(fighterPlane.transform.position.y < fighterPlane.minAltitude)
+        if(transform.position.y < fighterPlane.minAltitude)
         {
             worldTarget = new Vector3(transform.position.x, transform.position.y + reAdjustForce, transform.position.z);
             return fighterPlane.seekTarget(worldTarget);

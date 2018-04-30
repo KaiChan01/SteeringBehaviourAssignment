@@ -15,7 +15,7 @@ public class Scene1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(ship.transform.position.z > 150)
+		if(ship.transform.position.z > 100)
         {
             SceneManager.LoadScene("Scene2");
         }

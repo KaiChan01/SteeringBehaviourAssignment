@@ -17,7 +17,8 @@ public class AvoidPerimeter : SteeringBehaviour
     {
         if (Vector3.Distance(fighterPlane.transform.position, ship.transform.position) > maxDistFromShip)
         {
-            return fighterPlane.seekTarget(ship.transform.position);
+            Vector3 target = new Vector3(ship.transform.position.x, transform.position.y, ship.transform.position.z);
+            return fighterPlane.seekTarget(target);
         }
         return Vector3.zero;
     }
