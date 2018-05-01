@@ -5,7 +5,7 @@ using UnityEngine;
 public class HalfLoopTurn : SteeringBehaviour
 {
     Vector3 worldTarget;
-    Vector3 pivotpoint;
+    //Vector3 pivotpoint;
     public float radius;
     public float frequency;
 
@@ -24,7 +24,7 @@ public class HalfLoopTurn : SteeringBehaviour
     // Use this for initialization
     void Start()
     {
-        pivotpoint = transform.position + Vector3.up * radius;
+        //pivotpoint = transform.position + Vector3.up * radius;
         startingOrientation = transform.forward;
     }
 
