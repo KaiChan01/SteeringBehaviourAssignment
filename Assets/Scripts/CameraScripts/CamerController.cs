@@ -13,6 +13,9 @@ public class CamerController : MonoBehaviour {
     public float offsetDistance;
     public CamSetting cameraSetting;
 
+    private float zOffset = 0;
+    private bool topDownTransition = true;
+
     // Use this for initialization
     void Start () {
 		
@@ -31,9 +34,19 @@ public class CamerController : MonoBehaviour {
                 break;
 
             case CamSetting.topDown:
-                offsetDistance -= 10 * Time.deltaTime;
-                Vector3 target2 = targetObject.transform.position + (Vector3.up * offsetDistance);
+                if (Vector3.Distance(transform.position, targetObject.transform.position) >= 20 && topDownTransition == true)
+                {
+                    offsetDistance -= 10 * Time.deltaTime;
+                }
+                else
+                {
+                    topDownTransition = false;
+                    zOffset -= 5 * Time.deltaTime;
+                }
+                
+                Vector3 target2 = targetObject.transform.position + (Vector3.up * offsetDistance) + (Vector3.forward * zOffset);
                 transform.position = Vector3.Lerp(transform.position, target2, Time.deltaTime * 10);
+
                 transform.LookAt(targetObject.transform.position);
                 break;
         }

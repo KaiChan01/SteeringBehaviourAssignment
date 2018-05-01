@@ -24,7 +24,7 @@ public class HalfLoopTurn : SteeringBehaviour
     // Use this for initialization
     void Start()
     {
-        //pivotpoint = transform.position + Vector3.up * radius;
+        pivotpoint = transform.position + Vector3.up * radius;
         startingOrientation = transform.forward;
     }
 
@@ -40,8 +40,6 @@ public class HalfLoopTurn : SteeringBehaviour
         target.z = transform.position.z + Mathf.Cos(theta) * radius * startingOrientation.z;
         target.y = Mathf.Sin(theta) * radius + transform.position.y;
         target.x = transform.position.x + Mathf.Cos(theta) * radius * startingOrientation.x;
-
-        Debug.Log(transform.forward);
 
         theta += Time.deltaTime * frequency;
         worldTarget = target;

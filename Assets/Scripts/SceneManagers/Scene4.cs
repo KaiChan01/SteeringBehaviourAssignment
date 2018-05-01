@@ -16,7 +16,7 @@ public class Scene4 : MonoBehaviour {
         Debug.Log("called");
         Invoke("activateLockOnTarget", 4);
         Invoke("switchCamera", 12);
-        //Invoke("changeToScene5", 4);
+        Invoke("changeToScene5", 18);
     }
 	
 	// Update is called once per frame

@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class AltitudeMaintence : SteeringBehaviour
 {
-
-    public float frequency = 2f;
-    public float amp = 2f;
-    public float radius = 10;
-    public float distance = 15;
     public float reAdjustForce;
 
     public float roationSpeed;
