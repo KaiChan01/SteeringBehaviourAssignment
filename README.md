@@ -3,9 +3,9 @@ This project is part pf my Games Engines 2 module assignment. For this assignmen
 
 There is a PDF of the story board in this repo.
 
-#Demo
+# Demo
 [![Video](http://i3.ytimg.com/vi/TE_yt8LEkdg/maxresdefault.jpg)](https://www.youtube.com/watch?v=TE_yt8LEkdg&feature=youtu.be)
 
-#Scenes from the movie "Dunkirk"
+# Scenes from the movie "Dunkirk"
 [![Video](http://i3.ytimg.com/vi/ptJyCGNeNcE/maxresdefault.jpg)](https://www.youtube.com/watch?v=ptJyCGNeNcE)
 
